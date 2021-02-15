@@ -17,7 +17,6 @@
 		6777C4BF25D7521F00AC5E88 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777C4BE25D7521F00AC5E88 /* ViewModel.swift */; };
 		6777C4C925D9AB0300AC5E88 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777C4C825D9AB0300AC5E88 /* DataModel.swift */; };
 		6777C4D525DA65AE00AC5E88 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777C4D425DA65AE00AC5E88 /* TableViewCell.swift */; };
-		6777C4D825DA82C600AC5E88 /* SeconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777C4D725DA82C600AC5E88 /* SeconViewModel.swift */; };
 		90D2EAE4FF4E3E94E3FC27DD /* Pods_TestForPryaniky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A386F90103EDBE3A97BF03B1 /* Pods_TestForPryaniky.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		6777C4BE25D7521F00AC5E88 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		6777C4C825D9AB0300AC5E88 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		6777C4D425DA65AE00AC5E88 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		6777C4D725DA82C600AC5E88 /* SeconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeconViewModel.swift; sourceTree = "<group>"; };
 		A386F90103EDBE3A97BF03B1 /* Pods_TestForPryaniky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestForPryaniky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA1E82A119A755F69FCAA68 /* Pods-TestForPryaniky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestForPryaniky.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestForPryaniky/Pods-TestForPryaniky.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				6777C4BE25D7521F00AC5E88 /* ViewModel.swift */,
-				6777C4D725DA82C600AC5E88 /* SeconViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -256,7 +253,6 @@
 				6777C4BF25D7521F00AC5E88 /* ViewModel.swift in Sources */,
 				6777C4B325D7297200AC5E88 /* SecondViewController.swift in Sources */,
 				6777C49325D6DBB400AC5E88 /* ViewController.swift in Sources */,
-				6777C4D825DA82C600AC5E88 /* SeconViewModel.swift in Sources */,
 				6777C48F25D6DBB400AC5E88 /* AppDelegate.swift in Sources */,
 				6777C49125D6DBB400AC5E88 /* SceneDelegate.swift in Sources */,
 				6777C4D525DA65AE00AC5E88 /* TableViewCell.swift in Sources */,

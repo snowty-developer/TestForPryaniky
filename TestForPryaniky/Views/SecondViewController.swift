@@ -11,7 +11,8 @@ import RxCocoa
 
 class SecondViewController: UIViewController {
 
-    var data: DataType? 
+    var data: DataType?
+    let disposeBag = DisposeBag()
     
     @IBOutlet weak var textViewLabel: UILabel!
     @IBOutlet weak var nameViewLabel: UILabel!
@@ -30,19 +31,19 @@ class SecondViewController: UIViewController {
         switch self.data!.name {
         case .hz:
             Observable<String>.just("Обьект \((self.data as! Hz).name)")
-                .bind(to: nameViewLabel.rx.text)
+                .bind(to: nameViewLabel.rx.text).disposed(by: disposeBag)
             Observable<String>.just((self.data as! Hz).text)
-                .bind(to: textViewLabel.rx.text)
+                .bind(to: textViewLabel.rx.text).disposed(by: disposeBag)
         case .picture:
             Observable<String>.just("Обьект \((self.data as! Picture).name)")
-                .bind(to: nameViewLabel.rx.text)
+                .bind(to: nameViewLabel.rx.text).disposed(by: disposeBag)
             Observable<String>.just((self.data as! Picture).text)
-                .bind(to: textViewLabel.rx.text)
+                .bind(to: textViewLabel.rx.text).disposed(by: disposeBag)
         case .variant:
             Observable<String>.just("Обьект c ID \((self.data as! Variants).id)")
-                .bind(to: nameViewLabel.rx.text)
+                .bind(to: nameViewLabel.rx.text).disposed(by: disposeBag)
             Observable<String>.just((self.data as! Variants).text)
-                .bind(to: textViewLabel.rx.text)
+                .bind(to: textViewLabel.rx.text).disposed(by: disposeBag)
         default:
             break
         }
