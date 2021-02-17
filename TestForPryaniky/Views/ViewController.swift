@@ -31,26 +31,14 @@ class ViewController: UIViewController {
     private func bind() {
         let dataSource = RxTableViewSectionedReloadDataSource<SectionOfCustomData>(
           configureCell: { dataSource, tableView, indexPath, item in
-            var cell = tableView.dequeueReusableCell(withIdentifier: self.cellID, for: indexPath)
+            var cell = tableView.dequeueReusableCell(withIdentifier: self.cellID, for: indexPath) as! TableViewCell
             
             if cell.isEqual(nil) {
-                cell = UITableViewCell(style: .default, reuseIdentifier: self.cellID)
+                cell = UITableViewCell(style: .default, reuseIdentifier: self.cellID) as! TableViewCell
             }
             
-            switch item.name {
-            case .hz:
-                let hz = item as! Hz
-                cell.textLabel!.text = hz.text
-            case .picture:
-                let picture = item as! Picture
-                cell.textLabel!.text = picture.text
-                cell.imageView!.image = self.viewModel.image
-            case .variant:
-                let variants = item as! Variants
-                cell.textLabel!.text = variants.text
-            default:
-                break
-            }
+            cell.initCell(item, self.viewModel.image)
+            
             return cell
         })
         

@@ -19,5 +19,22 @@ class TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func initCell (_ item: DataType, _ image: UIImage?) {
+        switch item.name {
+        case .hz:
+            let hz = item as! Hz
+            textLabel!.text = hz.text
+        case .picture:
+            let picture = item as! Picture
+            textLabel!.text = picture.text
+            imageView!.image = image
+        case .variant:
+            let variants = item as! Variants
+            textLabel!.text = variants.text
+        default:
+            break
+        }
+    }
 
 }
