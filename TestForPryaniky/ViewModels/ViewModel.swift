@@ -18,7 +18,7 @@ class ViewModel {
     var sections: [SectionOfCustomData] = []
     
     
-    func loadData(completion: @escaping ([DataName],[DataType]) -> Void) {
+    func loadData(completion: @escaping () -> Void) {
         Alamofire.request("https://pryaniky.com/static/json/sample.json").responseJSON { response in
             if response.result.isSuccess {
                 let dataResult = JSON(response.value!)
@@ -54,7 +54,8 @@ class ViewModel {
                     }
                 }
                 DispatchQueue.main.async {
-                    completion(self.loadingView, self.loadingData)
+                    self.createSection(self.loadingData, self.loadingView)
+                    completion()
                 }
             }
             else { print("Connection error!") }

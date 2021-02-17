@@ -21,8 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         table.register(TableViewCell.self, forCellReuseIdentifier: cellID)
         
-        viewModel.loadData {view, data in
-            self.viewModel.createSection(data, view)
+        viewModel.loadData {() in
             self.bind()
         }
     }
