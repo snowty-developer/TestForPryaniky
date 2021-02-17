@@ -13,7 +13,7 @@ import RxDataSources
 class ViewController: UIViewController {
 
     @IBOutlet weak var table: UITableView!
-    let viewModel = ViewModel()
+    var viewModel = ViewModel() 
     let disposeBag = DisposeBag()
     let cellID = "Cell"
     
@@ -21,11 +21,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         table.register(TableViewCell.self, forCellReuseIdentifier: cellID)
         
-        DispatchQueue.main.async {
+        viewModel.loadData {view, data in
+            self.viewModel.createSection(data, view)
             self.bind()
-            self.table.reloadData()
         }
-        
     }
     
     

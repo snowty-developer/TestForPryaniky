@@ -10,6 +10,7 @@ import SwiftyJSON
 import RxDataSources
 import RxSwift
 
+
 enum DataName {
     case hz , picture, selector, variant, any
 }
